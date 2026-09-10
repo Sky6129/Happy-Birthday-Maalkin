@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Happy Birthday Maalkin ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     LOADING SCREEN
+========================= -->
+
+<div id="loader">
+
+    <div class="loader-heart">❤️</div>
+
+    <h1>Ek chhota sa surprise...</h1>
+
+    <p>Maalkin ke liye ❤️</p>
+
+    <div class="loader-line">
+        <span></span>
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="birthdayMusic" loop>
+    <source src="song/song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" class="music-button">
+    🎵
+</button>
+
+
+<!-- =========================
+     FLOATING HEARTS
+========================= -->
+
+<div class="floating-hearts"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            Today isn't just another day...
+        </p>
+
+        <h1>
+            Happy Birthday
+            <span>Maalkin ❤️</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Aaj duniya ki sabse special ladki ka birthday hai...
+        </p>
+
+        <button class="start-button" onclick="startJourney()">
+            Open Your Surprise 💌
+        </button>
+
+    </div>
+
+    <div class="scroll-down">
+        ↓
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro section">
+
+    <div class="section-number">01</div>
+
+    <p class="eyebrow">Dear Maalkin</p>
+
+    <h2>
+        Aaj ka din
+        <span>sirf aapka hai.</span>
+    </h2>
+
+    <div class="love-text">
+
+        <p>
+            Pata hai Maalkin...
+        </p>
+
+        <p>
+            duniya mein bohot saare log milte hain,
+            kuch log yaad reh jaate hain,
+            aur phir ek aisa insaan milta hai
+            jo life ka ek beautiful part ban jaata hai.
+        </p>
+
+        <p>
+            Mere liye woh insaan <strong>aap</strong> ho.
+        </p>
+
+        <p>
+            Isliye aaj sirf "Happy Birthday" bol dena
+            mujhe thoda boring laga.
+        </p>
+
+        <p class="big-line">
+            Toh socha...
+            <br>
+            <span>aapke liye ek poori duniya bana dete hain. ❤️</span>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BIRTHDAY COUNTDOWN
+========================= -->
+
+<section class="birthday-section section">
+
+    <div class="section-number">02</div>
+
+    <p class="eyebrow">The Special Day</p>
+
+    <h2>
+        Because today...
+        <span>you were born. ❤️</span>
+    </h2>
+
+    <div class="birthday-card">
+
+        <div class="cake">🎂</div>
+
+        <h3>Happy Birthday, Maalkin!</h3>
+
+        <p>
+            Aaj officially aap ek saal aur zyada beautiful ho gayi ho.
+        </p>
+
+        <div class="age-joke">
+            Don't worry...
+            <br>
+            age ek number hai.
+            <br>
+            <strong>Bas number thoda bada ho raha hai 😂</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<section class="gallery-section section">
+
+    <div class="section-number">03</div>
+
+    <p class="eyebrow">Our Little Universe</p>
+
+    <h2>
+        Kuch pictures...
+        <span>jo mere liye memories hain.</span>
+    </h2>
+
+    <p class="gallery-intro">
+        Har photo ke peeche ek story hai.
+        Aur honestly...
+        main in stories ko kabhi khatam nahi karna chahta.
+    </p>
+
+
+    <div class="photo-grid">
+
+        <div class="photo-card large">
+            <img src="images/photo1.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>01</span>
+                The smile I can never get tired of.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo2.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>02</span>
+                My favourite face.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo3.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>03</span>
+                How can someone be this cute?
+            </div>
+        </div>
+
+        <div class="photo-card wide">
+            <img src="images/photo4.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>04</span>
+                One picture. A thousand feelings.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo5.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>05</span>
+                Pretty. Always.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo6.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>06</span>
+                My favourite person.
+            </div>
+        </div>
+
+        <div class="photo-card large">
+            <img src="images/photo7.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>07</span>
+                This one deserves a permanent place.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo8.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>08</span>
+                Still can't believe you're mine.
+            </div>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/photo9.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>09</span>
+                My kind of beautiful.
+            </div>
+        </div>
+
+        <div class="photo-card wide">
+            <img src="images/photo10.jpeg" alt="Maalkin">
+            <div class="photo-caption">
+                <span>10</span>
+                And my favourite chapter continues...
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SADI BUDDHI SECTION 😂
+========================= -->
+
+<section class="buddhi-section section">
+
+    <div class="section-number">04</div>
+
+    <p class="eyebrow">WARNING ⚠️</p>
+
+    <h2>
+        Aap mujhe bolti ho...
+        <span>"Sadi Buddhi" 😂</span>
+    </h2>
+
+    <div class="buddhi-card">
+
+        <div class="buddhi-emoji">
+            👴🏻
+        </div>
+
+        <h3>
+            Yes, Maalkin.
+            <br>
+            Your Sadi Buddhi has something to say.
+        </h3>
+
+        <p>
+            Aap mujhe sadi buddhi bolo,
+            buddha bolo,
+            pagal bolo...
+        </p>
+
+        <p>
+            lekin birthday wish karne ka haq
+            sabse pehle mera hi hai. 😌
+        </p>
+
+        <div class="buddhi-dialogue">
+
+            <div>
+                <span>Maalkin:</span>
+                Sadi Buddhi 😭
+            </div>
+
+            <div>
+                <span>Sadi Buddhi:</span>
+                Ji Maalkin? 😭
+            </div>
+
+            <div>
+                <span>Maalkin:</span>
+                Aap bohot irritate karte ho.
+            </div>
+
+            <div>
+                <span>Sadi Buddhi:</span>
+                Lekin pyaar bhi toh karta hoon. ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REASONS
+========================= -->
+
+<section class="reasons section">
+
+    <div class="section-number">05</div>
+
+    <p class="eyebrow">Why You?</p>
+
+    <h2>
+        Mujhe aap kyun pasand ho?
+        <span>Good question.</span>
+    </h2>
+
+    <div class="reasons-grid">
+
+        <div class="reason">
+            <div>01</div>
+            <h3>Your Smile</h3>
+            <p>
+                Aapki smile ka koi logic nahi hai.
+                Bas dekh ke automatically mood better ho jaata hai.
+            </p>
+        </div>
+
+        <div class="reason">
+            <div>02</div>
+            <h3>Your Madness</h3>
+            <p>
+                Aap thodi crazy ho.
+                Main bhi thoda pagal hoon.
+                Perfect combination. 😂
+            </p>
+        </div>
+
+        <div class="reason">
+            <div>03</div>
+            <h3>Your Heart</h3>
+            <p>
+                Aap jitni beautiful bahar se ho,
+                usse bhi zyada beautiful andar se ho.
+            </p>
+        </div>
+
+        <div class="reason">
+            <div>04</div>
+            <h3>Your Presence</h3>
+            <p>
+                Kabhi kabhi kuch karna zaroori nahi hota.
+                Bas aapka hona enough hota hai.
+            </p>
+        </div>
+
+        <div class="reason">
+            <div>05</div>
+            <h3>Your Annoying Side</h3>
+            <p>
+                Haan ye bhi pasand hai.
+                Thoda irritate karna allowed hai.
+                Birthday special permission. 😂
+            </p>
+        </div>
+
+        <div class="reason">
+            <div>06</div>
+            <h3>Because You're You</h3>
+            <p>
+                Sabse simple answer.
+                Aapki jagah koi aur ho hi nahi sakta.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORY TIMELINE
+========================= -->
+
+<section class="timeline-section section">
+
+    <div class="section-number">06</div>
+
+    <p class="eyebrow">Our Story</p>
+
+    <h2>
+        Ek chhoti si
+        <span>timeline...</span>
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">❤️</div>
+
+            <div class="timeline-content">
+
+                <small>THE BEGINNING</small>
+
+                <h3>Jab aap meri life mein aayi...</h3>
+
+                <p>
+                    Mujhe nahi pata tha ki ek person
+                    itni memories ka reason ban sakta hai.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">✨</div>
+
+            <div class="timeline-content">
+
+                <small>THE MEMORIES</small>
+
+                <h3>Phir moments collect hote gaye...</h3>
+
+                <p>
+                    Chhoti chhoti conversations,
+                    fights, hasi, pagalpan...
+                    sab apne aap memories ban gaye.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">🥹</div>
+
+            <div class="timeline-content">
+
+                <small>TODAY</small>
+
+                <h3>Aaj aapka birthday hai.</h3>
+
+                <p>
+                    Aur main bas itna chahta hoon
+                    ki aap smile karo.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot">∞</div>
+
+            <div class="timeline-content">
+
+                <small>NEXT CHAPTER</small>
+
+                <h3>Abhi toh bohot kuch baaki hai.</h3>
+
+                <p>
+                    Aur hopefully...
+                    hum aur bohot saari memories banayenge.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="letter-section section">
+
+    <div class="section-number">07</div>
+
+    <p class="eyebrow">A Letter For You</p>
+
+    <h2>
+        Thoda serious ho jaate hain...
+        <span>sirf 2 minute. ❤️</span>
+    </h2>
+
+    <div class="letter">
+
+        <div class="letter-top">
+            💌
+        </div>
+
+        <h3>Dear Maalkin,</h3>
+
+        <p>
+            Sabse pehle...
+            Happy Birthday. ❤️
+        </p>
+
+        <p>
+            Main shayad har baar perfect words mein
+            express nahi kar paata ki aap mere liye
+            kitni important ho.
+        </p>
+
+        <p>
+            Kabhi main aapko irritate karta hoon,
+            kabhi aap mujhe "Sadi Buddhi" bolti ho,
+            kabhi hum dono bina kisi reason ke
+            ek dusre ko pagal kar dete hain. 😂
+        </p>
+
+        <p>
+            Lekin in sab ke beech ek cheez hamesha
+            same rehti hai...
+        </p>
+
+        <p class="letter-highlight">
+            Aap mere liye bohot special ho.
+        </p>
+
+        <p>
+            Aaj aapka birthday hai,
+            toh meri wish bas itni hai ki
+            aap hamesha khush raho,
+            smile karti raho,
+            aur jo bhi aap chahti ho
+            woh aapko mile.
+        </p>
+
+        <p>
+            Aur haan...
+            agar life kabhi difficult lage,
+            toh yaad rakhna ki kahin na kahin
+            ek Sadi Buddhi aapko annoy karne
+            ke liye ready baithi hai. 😂❤️
+        </p>
+
+        <p>
+            Thank you for being you.
+        </p>
+
+        <p class="signature">
+            Always yours,<br>
+            Your Sadi Buddhi ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FULL PHOTO MOMENT
+========================= -->
+
+<section class="fullscreen-memory">
+
+    <div class="fullscreen-image">
+        <img src="images/photo1.jpg" alt="Beautiful memory">
+    </div>
+
+    <div class="fullscreen-text">
+
+        <p>Sometimes...</p>
+
+        <h2>
+            One person
+            <br>
+            becomes a
+            <span>whole world.</span>
+        </h2>
+
+        <p>
+            For me, that's you, Maalkin.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BIRTHDAY WISH
+========================= -->
+
+<section class="wish-section section">
+
+    <div class="wish-stars"></div>
+
+    <div class="wish-content">
+
+        <p class="eyebrow">One Last Thing</p>
+
+        <h2>
+            Make a wish,
+            <span>Maalkin.</span>
+        </h2>
+
+        <div class="birthday-cake">
+            🎂
+        </div>
+
+        <p>
+            Close your eyes for a second...
+        </p>
+
+        <p>
+            Think of something you really want.
+        </p>
+
+        <button id="wishButton" class="wish-button">
+            I Made My Wish ✨
+        </button>
+
+        <div id="wishMessage" class="wish-message">
+
+            <h3>Then I have one wish too...</h3>
+
+            <p>
+                May that smile of yours
+                never disappear. ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL SURPRISE
+========================= -->
+
+<section class="final-section">
+
+    <div class="final-hearts"></div>
+
+    <div class="final-content">
+
+        <p class="final-small">
+            And finally...
+        </p>
+
+        <h1>
+            Happy Birthday
+            <span>Maalkin ❤️</span>
+        </h1>
+
+        <p class="final-message">
+
+            Aap meri favourite person ho.
+            <br><br>
+
+            Aap meri favourite problem ho.
+            😂
+            <br><br>
+
+            Aur haan...
+            <br>
+
+            Main aapki favourite
+            <strong>Sadi Buddhi</strong>
+            hoon.
+        </p>
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <p class="forever">
+            Here's to you.
+            <br>
+            Here's to us.
+            <br>
+            And here's to all the memories
+            we haven't made yet.
+        </p>
+
+        <button onclick="restartExperience()" class="restart-button">
+            Watch It Again ↻
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HEART BURST
+========================= -->
+
+<div id="heartBurst"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080507;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #080507;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s ease;
+}
+
+.loader-heart {
+    font-size: 65px;
+    animation: heartbeat 1s infinite;
+}
+
+#loader h1 {
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+#loader p {
+    margin-top: 5px;
+    color: #aaa;
+}
+
+.loader-line {
+    width: 160px;
+    height: 2px;
+    background: #272027;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.loader-line span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #ff4f91;
+    animation: loading 2.5s forwards;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(20,10,15,.7);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 5000;
+    font-size: 20px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(5,2,5,.45),
+            rgba(5,2,5,.9)
+        ),
+        url("images/photo1.jpg") center/cover;
+
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(0,0,0,.8) 85%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    max-width: 850px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #ff91b7;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(60px, 13vw, 140px);
+    line-height: .9;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ff70a4;
+}
+
+.hero-subtitle {
+    color: #ddd;
+    font-size: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.start-button {
+    margin-top: 40px;
+    padding: 17px 30px;
+    border-radius: 50px;
+    border: none;
+    background: #ff4f91;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 10px 40px rgba(255,79,145,.3);
+    transition: .3s;
+}
+
+.start-button:active {
+    transform: scale(.94);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    font-size: 30px;
+    animation: bounce 1.5s infinite;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section {
+    position: relative;
+    padding: 120px 7vw;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-number {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    color: #30252c;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.eyebrow {
+    color: #ff72a5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1;
+    margin-bottom: 45px;
+}
+
+.section h2 span {
+    color: #ff70a4;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.love-text {
+    max-width: 700px;
+    color: #bbb;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.love-text p {
+    margin-bottom: 25px;
+}
+
+.love-text strong {
+    color: white;
+}
+
+.big-line {
+    color: #ddd;
+    font-size: 19px;
+}
+
+.big-line span {
+    color: #ff72a5;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday-section {
+    text-align: center;
+}
+
+.birthday-card {
+    max-width: 600px;
+    margin: auto;
+    padding: 55px 30px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 30px;
+    background: rgba(255,255,255,.025);
+}
+
+.cake {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.birthday-card h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.birthday-card p {
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.age-joke {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,79,145,.08);
+    color: #ccc;
+}
+
+.age-joke strong {
+    color: #ff70a4;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    max-width: 1500px;
+}
+
+.gallery-intro {
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.photo-card {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #151015;
+}
+
+.photo-card.large {
+    height: 600px;
+}
+
+.photo-card.wide {
+    grid-column: span 2;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,.9));
+    font-size: 12px;
+    color: #ddd;
+}
+
+.photo-caption span {
+    color: #ff70a4;
+    margin-right: 10px;
+}
+
+
+/* =========================
+   BUDDHI
+========================= */
+
+.buddhi-section {
+    text-align: center;
+}
+
+.buddhi-card {
+    max-width: 700px;
+    margin: auto;
+    background: linear-gradient(
+        145deg,
+        #1b1016,
+        #0e080b
+    );
+    padding: 50px 30px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.buddhi-emoji {
+    font-size: 80px;
+}
+
+.buddhi-card h3 {
+    margin: 25px 0;
+    font-size: 24px;
+}
+
+.buddhi-card p {
+    color: #aaa;
+    margin: 15px 0;
+}
+
+.buddhi-dialogue {
+    text-align: left;
+    margin-top: 35px;
+    display: grid;
+    gap: 12px;
+}
+
+.buddhi-dialogue div {
+    background: rgba(255,255,255,.05);
+    padding: 15px;
+    border-radius: 15px;
+    color: #ccc;
+}
+
+.buddhi-dialogue span {
+    color: #ff70a4;
+    font-weight: 600;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.reason {
+    min-height: 250px;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.07);
+    transition: .4s;
+}
+
+.reason:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255,112,164,.4);
+}
+
+.reason > div {
+    color: #ff70a4;
+    font-size: 12px;
+}
+
+.reason h3 {
+    margin: 20px 0 12px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+.reason p {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 750px;
+    margin: auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 70px;
+    padding-bottom: 70px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 40px;
+    bottom: 0;
+    width: 1px;
+    background: #35232c;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #1d1017;
+    border: 1px solid #ff70a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.timeline-content small {
+    color: #ff70a4;
+    letter-spacing: 3px;
+    font-size: 9px;
+}
+
+.timeline-content h3 {
+    margin: 10px 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+.timeline-content p {
+    color: #999;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    text-align: center;
+}
+
+.letter {
+    max-width: 700px;
+    margin: auto;
+    background: #f7eee9;
+    color: #33272b;
+    padding: 55px 40px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 30px 100px rgba(0,0,0,.4);
+    transform: rotate(-1deg);
+}
+
+.letter-top {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.letter h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.letter-highlight {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #d63d72;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    text-align: right;
+}
+
+
+/* =========================
+   FULLSCREEN MEMORY
+========================= */
+
+.fullscreen-memory {
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-image {
+    position: absolute;
+    inset: 0;
+}
+
+.fullscreen-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.62);
+}
+
+.fullscreen-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullscreen-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+}
+
+.fullscreen-text p {
+    color: #ccc;
+}
+
+.fullscreen-text h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px, 10vw, 120px);
+    line-height: .9;
+    margin: 30px 0;
+}
+
+.fullscreen-text span {
+    color: #ff70a4;
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+.wish-section {
+    min-height: 100svh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wish-content {
+    position: relative;
+    z-index: 2;
+}
+
+.birthday-cake {
+    font-size: 100px;
+    margin: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.wish-content > p:not(.eyebrow) {
+    color: #aaa;
+    margin: 8px;
+}
+
+.wish-button {
+    margin-top: 35px;
+    padding: 17px 30px;
+    background: transparent;
+    color: white;
+    border: 1px solid #ff70a4;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.wish-message {
+    display: none;
+    margin-top: 40px;
+    animation: fadeUp 1s;
+}
+
+.wish-message h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.wish-message p {
+    color: #ff70a4 !important;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            #27101b,
+            #080507 70%
+        );
+}
+
+.final-content {
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.final-small {
+    color: #aaa;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.final-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(60px, 12vw, 130px);
+    line-height: .9;
+    margin: 30px 0;
+}
+
+.final-content h1 span {
+    color: #ff70a4;
+    display: block;
+}
+
+.final-message {
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.final-message strong {
+    color: #ff70a4;
+}
+
+.final-heart {
+    font-size: 70px;
+    margin: 40px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.forever {
+    color: #999;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    line-height: 1.7;
+}
+
+.restart-button {
+    margin-top: 40px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    padding: 12px 25px;
+    border-radius: 30px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    animation: heartFly 4s linear forwards;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes loading {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes bounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartFly {
+
+    from {
+        transform: translateY(0) scale(.5) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100vh) scale(1.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE / iPHONE
+========================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .section-number {
+        font-size: 60px;
+        left: 15px;
+        top: 25px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-card,
+    .photo-card.large {
+        height: 280px;
+    }
+
+    .photo-card.wide {
+        grid-column: span 2;
+        height: 330px;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 40px 25px;
+        transform: none;
+    }
+
+    .letter-highlight {
+        font-size: 30px;
+    }
+
+    .fullscreen-text h2 {
+        font-size: 65px;
+    }
+
+    .final-content h1 {
+        font-size: 70px;
+    }
+
+}
